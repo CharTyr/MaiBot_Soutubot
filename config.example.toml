@@ -1,0 +1,49 @@
+[plugin]
+enabled = true
+config_version = "0.3.0"
+
+[search]
+base_url = "https://soutubot.moe"
+timeout_seconds = 60
+max_retries = 1
+default_strict = false
+min_similarity = 28.0
+max_results = 6
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+cooldown_seconds = 8
+send_preview = false
+
+[saucenao]
+enabled = true
+# SauceNAO API Key；正式部署写在 data/plugins/chartyr.soutubot/config.toml
+api_key = ""
+endpoint = "https://saucenao.com/search.php"
+timeout_seconds = 45
+db = 999
+numres = 8
+dedupe = 2
+hide = 0
+min_similarity = 50.0
+max_results = 6
+include_hidden = true
+
+[google]
+enabled = true
+# SerpAPI Key（Google Lens）；正式部署写在 data/plugins/.../config.toml
+api_key = ""
+endpoint = "https://serpapi.com/search.json"
+timeout_seconds = 60
+hl = "zh-cn"
+country = ""
+search_type = "visual_matches"
+max_results = 6
+# 插画意图时是否并联 Google
+with_illustration = true
+
+[hosts]
+nhentai_host = "nhentai.net"
+ehentai_host = "e-hentai.org"
+panda_host = "panda.chaika.moe"
+
+[admin]
+admin_users = []
